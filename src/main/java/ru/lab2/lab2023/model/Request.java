@@ -19,21 +19,25 @@ import javax.validation.constraints.NotNull;
 public class Request {
 
     @NotBlank
-    private String uid;
+    private String uid; // Уникальный идентификатор сообщения
     @NotBlank
     @Max(32)
-    private String operationUid;
-    private Systems systemName;
+    private String operationUid; // Уникальный идентификатор операции
+    private Systems systemName; // Имя системы
     @NotBlank
-    private String systemTime;
-    private String source;
+    private String systemTime; // Время создания сообщения
+    private String source; // Наименование ресурса
+    private Positions position; // Должность
+    private Double salary; // Зарплата
+    private Double bonus; // Коэффициент
+    private int workDays; // Рабочие дни
     @NotNull
     @Min(1)
     @Max(10000)
-    private int communicationId;
-    private int templateId;
-    private int productCode;
-    private int smsCode;
+    private int communicationId; // Уникальный идентификатор коммуникации
+    private int templateId; // Уникальный идентификатор шаблона
+    private int productCode; // Код продукта
+    private int smsCode; // Смс код
 
     @Override
     public String toString() {
@@ -46,5 +50,7 @@ public class Request {
                 ", productCode="+productCode+
                 ", smsCode=" +smsCode+
                 '}';
+
+
     }
 }

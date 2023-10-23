@@ -7,12 +7,13 @@ import lombok.Data;
 @Builder
 public class Response {
 
-    private String uid;
-    private String operationUid;
-    private String systemTime;
-    private Codes code;
-    private ErrorCodes errorCode;
-    private ErrorMessages errorMessage;
+    private String uid; // Уникальный идентификатор сообщения
+    private String operationUid; // Уникальный идентификатор операции
+    private String systemTime; // Время создания сообщения
+    private Codes code; // Код ошибки
+    private Double annualBonus; // Годовая премия
+    private ErrorCodes errorCode; // Расшифровка кода ошибки
+    private ErrorMessages errorMessage; // Сообщение об ошибке
 
     @Override
     public String toString() {
@@ -21,6 +22,7 @@ public class Response {
                 ", operationUid='" + operationUid + '\'' +
                 ", systemTime='" + systemTime + '\'' +
                 ", code='" + code + '\'' +
+                ", annualBonus='" + annualBonus + '\'' +
                 ", errorCode='" + errorCode + '\'' +
                 ", errorMessage='" + errorMessage + '\'' +
                 '}';
